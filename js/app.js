@@ -33,8 +33,36 @@ document.addEventListener('DOMContentLoaded', () => {
     ui.llenarOpciones();
 })
 
+// Event Listeners
+
+eventListeners();
+
+function eventListeners(){
+    const formulario = document.querySelector('#cotizar-seguro');
+    formulario.addEventListener('submit', cotizarSeguro);
+}
 
 
+// Funciones
+
+function cotizarSeguro(e){
+    e.preventDefault();
+
+    // Leer marca
+    const marca = document.querySelector('#marca').value;
+
+    // Leer año
+    const year = document.querySelector('#year').value;
+
+    // Leer tipo cobertura
+    const tipo = document.querySelector('input[name="tipo":checked]').value;
+
+    if (marca === '' || year === '' || tipo === ''){
+        console.log('No paso validación');
+    } else {
+        console.log('Paso validación');
+    }
+}
 
 
 
