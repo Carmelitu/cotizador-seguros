@@ -27,7 +27,6 @@ Outcome
 <img src="https://github.com/Carmelitu/cotizador-seguros/blob/master/Cotiza-OK.JPG" style="margin: 0 auto"/>
 
 
-
 ## Builded with 🛠️
 
 * JavaScript
