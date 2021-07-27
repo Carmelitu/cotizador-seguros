@@ -99,6 +99,55 @@ UI.prototype.mostrarMensaje = function (mensaje, tipo){
     }, 3000);
 }
 
+// Mostrar resultado
+UI.prototype.mostrarResultado = function (seguro, total) {
+    const {marca, year, tipo} = seguro;
+
+    // Crear resultado
+    const div = document.createElement('div');
+    div.classList.add('mt-10');
+
+    // Pasar marca a texto
+    let textoMarca;
+
+    switch (marca) {
+        case '1':
+            textoMarca = 'Americano';
+            break;
+
+        case '2':
+            textoMarca = 'Asiatico';
+            break;
+
+        case '3':
+            textoMarca = 'Europeo';
+            break;
+
+        default:
+            break;
+    }
+
+    div.innerHTML = `
+        <p class="header">Tu Resumen</p>
+        <p class="font-bold">Marca: <span class="font-normal"> ${textoMarca} </span></p>
+        <p class="font-bold">Año: <span class="font-normal"> ${year} </span></p>
+        <p class="font-bold">Tipo: <span class="font-normal capitalize"> ${tipo} </span></p>
+        <p> </p>
+        <p class="font-bold">Total: <span class="font-normal">$ ${total} </span></p>
+    `
+
+    const resultadoDiv = document.querySelector('#resultado');
+    
+    // Mostrar Spinner
+    const spinner = document.querySelector('#cargando');
+    spinner.style.display = 'block';
+
+    setTimeout(() => {
+        spinner.style.display = 'none';
+        resultadoDiv.appendChild(div);
+    }, 3000);
+}
+
 // Instanciar UI
 const ui = new UI();
 
@@ -131,18 +180,29 @@ function cotizarSeguro(e){
     const tipo = document.querySelector('input[name="tipo"]:checked').value;
 
     if (marca === '' || year === '' || tipo === ''){
+        const resultados = document.querySelector('#resultado div');
+        if (resultados !== null){
+            resultados.remove();
+        }
         ui.mostrarMensaje('Todos los campos son obligatorios', 'error');
+        
         return;
     }
 
     ui.mostrarMensaje('Cotizando...', 'correcto');
 
+    // Ocultar cotizacion previa
+    const resultados = document.querySelector('#resultado div');
+    if (resultados !== null){
+        resultados.remove();
+    }
+
     // Instanciar seguro
-
     const seguro = new Seguro(marca, year, tipo);
-    seguro.cotizar();
+    const total = seguro.cotizar();
 
-
+    // Muestra resultado
+    ui.mostrarResultado(seguro, total);
 }
 
 
