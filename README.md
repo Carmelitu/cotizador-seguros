@@ -1,4 +1,4 @@
-# Cotizador de Seguros - Insurance Calculator
+# Cotizador de Seguros - Insurance Price Calculator
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/385c7ade-dac5-4c09-b649-32a580b0468f/deploy-status)](https://app.netlify.com/sites/cotizador-seguros-carmelitu/deploys)
 
