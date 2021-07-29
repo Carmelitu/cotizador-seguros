@@ -10,25 +10,21 @@ This program is an insurance price calculator. What it does is validate that all
 
 ## Home Screen
 
-Welcome Prompt
-
-<img src="https://github.com/Carmelitu/gasto-semanal/blob/master/prompt.JPG" style="margin: 0 auto"/>
-
 Home
 
-<img src="https://github.com/Carmelitu/gasto-semanal/blob/master/home.JPG" style="margin: 0 auto"/>
+<img src="https://github.com/Carmelitu/cotizador-seguros/blob/master/Cotiza-home.JPG" style="margin: 0 auto"/>
 
-Validations are OK, adding...
+Missing fields
 
-<img src="https://github.com/Carmelitu/gasto-semanal/blob/master/added.JPG" style="margin: 0 auto"/>
+<img src="https://github.com/Carmelitu/cotizador-seguros/blob/master/Cotiza-error.JPG" style="margin: 0 auto"/>
 
-Alert when budget is at 25% or low
+Validations are OK, loading...
 
-<img src="https://github.com/Carmelitu/gasto-semanal/blob/master/alert.JPG" style="margin: 0 auto"/>
+<img src="https://github.com/Carmelitu/cotizador-seguros/blob/master/Cotiza-OK-loading.JPG" style="margin: 0 auto"/>
 
-No more money
+Outcome
 
-<img src="https://github.com/Carmelitu/gasto-semanal/blob/master/no-budget.JPG" style="margin: 0 auto"/>
+<img src="https://github.com/Carmelitu/cotizador-seguros/blob/master/Cotiza-OK.JPG" style="margin: 0 auto"/>
 
 
 ## Builded with 🛠️
